@@ -36,8 +36,14 @@
           total1 = i * base6
           if (total1 >= $("#inputAmount").val()) { break; }
         }
-        $("#v1").html('<font color=\"red\">' + v1 + '</font>')
-        $("#total1").html(total1)
+        $("#v1").html(v1)
+        if (total1 > $("#inputAmount").val()) {
+          $("#total1").html('<font color=\"green\">' + total1 + '</font>')
+        }
+        else {
+          $("#total1").html('<font color=\"red\">' + total1 + '</font>')
+        }
+//         $("#total1").html(total1)
 
 
         for (let i = 0; i <= 6; i++) {
