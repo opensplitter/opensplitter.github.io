@@ -3,7 +3,7 @@
     <script type="text/javascript" src="./jquery.js"></script>
     
     <script>
-      $("#ver").html('1.0.0')
+      $("#ver").html('1.0.1')
       
       function cal() {
         base6 = 30
@@ -15,6 +15,7 @@
         for (let i = 1; i <= 6; i++) {
           v1 = i
           total1 = i * base6
+          if (total1 >= $("#inputAmount").val()) { break; }
         }
         
         $("#v1").html(v1)
