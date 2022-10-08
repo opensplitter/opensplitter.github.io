@@ -3,61 +3,60 @@
     <script type="text/javascript" src="./jquery.js"></script>
     
     <script>
-      $( document ).ready(
-        function setVerison() {
-          $("#ver").html('1.0.13')
+      function setVerison() {
+        $("#ver").html('1.0.13')
+      }
+
+      function cal() {
+        base6 = 30
+        base2 = 80
+
+        //if is vegetable
+        //mission(6): 30 / 170 
+        //mission(2): 80 / 250
+//         alert($("#isVegetable").prop("checked"))
+        if ($("#isVegetable").prop("checked")) {
+//           alert("checked")
+          base6 = 170
+          base2 = 250
         }
 
-        function cal() {
-          base6 = 30
-          base2 = 80
+        $("#baseValue").html(base6 + '/' + base2)
 
-          //if is vegetable
-          //mission(6): 30 / 170 
-          //mission(2): 80 / 250
-  //         alert($("#isVegetable").prop("checked"))
-          if ($("#isVegetable").prop("checked") === true) {
-  //           alert("checked")
-            base6 = 170
-            base2 = 250
-          }
+        v1 = 0
+        total1 = 0
+        v2 = 0
+        total2 = 0
+        v3 = 0
+        total3 = 0
 
-          $("#baseValue").html(base6 + '/' + base2)
-
-          v1 = 0
-          total1 = 0
-          v2 = 0
-          total2 = 0
-          v3 = 0
-          total3 = 0
-
-          for (let i = 0; i <= 6; i++) {
-            v1 = i
-            total1 = i * base6
-            if (total1 >= $("#inputAmount").val()) { break; }
-          }
-          $("#v1").html(v1)
-          $("#total1").html(total1)
-
-
-          for (let i = 0; i <= 6; i++) {
-            v2 = i
-            total2 = i * base6 + base2
-            if (total2 >= $("#inputAmount").val()) { break; }
-          }
-          $("#v2").html(v2)
-          $("#total2").html(total2)
-
-
-          for (let i = 0; i <= 6; i++) {
-            v3 = i
-            total3 = i * base6 + base2 * 2
-            if (total3 >= $("#inputAmount").val()) { break; }
-          }
-          $("#v3").html(v3)
-          $("#total3").html(total3)
+        for (let i = 0; i <= 6; i++) {
+          v1 = i
+          total1 = i * base6
+          if (total1 >= $("#inputAmount").val()) { break; }
         }
-      )
+        $("#v1").html(v1)
+        $("#total1").html(total1)
+
+
+        for (let i = 0; i <= 6; i++) {
+          v2 = i
+          total2 = i * base6 + base2
+          if (total2 >= $("#inputAmount").val()) { break; }
+        }
+        $("#v2").html(v2)
+        $("#total2").html(total2)
+
+
+        for (let i = 0; i <= 6; i++) {
+          v3 = i
+          total3 = i * base6 + base2 * 2
+          if (total3 >= $("#inputAmount").val()) { break; }
+        }
+        $("#v3").html(v3)
+        $("#total3").html(total3)
+      }
+      
     </script>
     
   </head>
