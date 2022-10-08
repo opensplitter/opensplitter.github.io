@@ -4,7 +4,7 @@
     
     <script>
       function setVerison() {
-        $("#ver").html('1.0.2')
+        $("#ver").html('1.0.3')
       }
       
       function cal() {
@@ -18,7 +18,7 @@
         total3 = 0
         //mission(6): 30 / 170 
         //mission(2): 80 / 250
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 0; i <= 6; i++) {
           v1 = i
           total1 = i * base6
           if (total1 >= $("#inputAmount").val()) { break; }
@@ -27,7 +27,7 @@
         $("#total1").html(total1)
         
         
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 0; i <= 6; i++) {
           v2 = i
           total2 = i * base6 + base2
           if (total2 >= $("#inputAmount").val()) { break; }
@@ -36,7 +36,7 @@
         $("#total2").html(total2)
         
         
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 0; i <= 6; i++) {
           v3 = i
           total3 = i * base6 + base2 * 2
           if (total3 >= $("#inputAmount").val()) { break; }
