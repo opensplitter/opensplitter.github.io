@@ -12,6 +12,8 @@
         base2 = 80
         
         //if is vegetable
+        //mission(6): 30 / 170 
+        //mission(2): 80 / 250
         if ($("#isVegetable").checked) {
           base6 = 170
           base2 = 250
@@ -19,15 +21,13 @@
         
         $("#baseValue").html(base6 + '/' base2)
         
-        
         v1 = 0
         total1 = 0
         v2 = 0
         total2 = 0
         v3 = 0
         total3 = 0
-        //mission(6): 30 / 170 
-        //mission(2): 80 / 250
+        
         for (let i = 0; i <= 6; i++) {
           v1 = i
           total1 = i * base6
@@ -53,7 +53,6 @@
         }
         $("#v3").html(v3)
         $("#total3").html(total3)
-//         alert("input: " + $("#inputAmount").val()) 
       }
     </script>
     
