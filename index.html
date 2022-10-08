@@ -4,7 +4,7 @@
     
     <script>
       function setVerison() {
-        $("#ver").html('1.0.10')
+        $("#ver").html('1.0.11')
       }
       
       function cal() {
@@ -14,7 +14,9 @@
         //if is vegetable
         //mission(6): 30 / 170 
         //mission(2): 80 / 250
+        alert($("#isVegetable").prop("checked"))
         if ($("#isVegetable").prop("checked") == "checked") {
+          alert("checked")
           base6 = 170
           base2 = 250
         }
