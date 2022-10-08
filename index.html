@@ -4,7 +4,7 @@
     
     <script>
       function setVerison() {
-        $("#ver").html('1.0.1')
+        $("#ver").html('1.0.2')
       }
       
       function cal() {
@@ -32,8 +32,8 @@
           total2 = i * base6 + base2
           if (total2 >= $("#inputAmount").val()) { break; }
         }
-        $("#v1").html(v2)
-        $("#total1").html(total2)
+        $("#v2").html(v2)
+        $("#total2").html(total2)
         
         
         for (let i = 1; i <= 6; i++) {
@@ -41,8 +41,8 @@
           total3 = i * base6 + base2 * 2
           if (total3 >= $("#inputAmount").val()) { break; }
         }
-        $("#v1").html(v3)
-        $("#total1").html(total3)
+        $("#v3").html(v3)
+        $("#total3").html(total3)
 //         alert("input: " + $("#inputAmount").val()) 
       }
     </script>
