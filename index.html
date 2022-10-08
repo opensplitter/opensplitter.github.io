@@ -4,7 +4,8 @@
     
     <script>
       function cal() {
-        alert("OK") 
+        
+        alert("input: " + $("#inputAmount").val()) 
       }
     </script>
     
@@ -15,7 +16,7 @@
     <table>
       <tr>
         <td>
-          <input type="text" id="amount">
+          <input type="text" id="inputAmount">
         </td>
         <td>
           <button type="button" onClick="cal()" >Update</button>
