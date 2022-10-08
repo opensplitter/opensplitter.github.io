@@ -1,6 +1,13 @@
 <html>
   <head>
     <script type="text/javascript" src="./jquery.js"></script>
+    
+    <script>
+      function cal() {
+        alert("OK") 
+      }
+    </script>
+    
   </head>
     
   <body>
@@ -11,25 +18,55 @@
           <input type="text" id="amount">
         </td>
         <td>
-          <button type="button">Update</button>
+          <button type="button" onClick="cal()" >Update</button>
         </td>
       </tr>
       
       <tr>
+        <td>
+          Mission(2)
+        </td>
         <td>
           Mission(6)
         </td>
         <td>
-          Mission(2)
+          Total
         </td>
       </tr>
       
       <tr>
         <td>
-          <span id="m1">0</span>
+          <span>0</span>
         </td>
         <td>
-          <span id="m2">0</span>
+          <span id="v1">??</span>
+        </td>
+        <td>
+          <span id="total1">??</span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <span>1</span>
+        </td>
+        <td>
+          <span id="v2">??</span>
+        </td>
+        <td>
+          <span id="total2">??</span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <span>2</span>
+        </td>
+        <td>
+          <span id="v2">??</span>
+        </td>
+        <td>
+          <span id="total3">??</span>
         </td>
       </tr>
     </table>
