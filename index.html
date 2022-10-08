@@ -3,6 +3,9 @@
     <script type="text/javascript" src="./jquery.js"></script>
     
     <script>
+      function setVerison() {
+        $("#ver").html('1.0.0')
+      }
       
       function cal() {
         base6 = 30
@@ -46,10 +49,7 @@
     
   </head>
     
-  <body>
-    <script>
-      $("#ver").html('1.0.2')
-    </script>
+  <body onLoad="setVerison()">
     
     <table border=1>
       
