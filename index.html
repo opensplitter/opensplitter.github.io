@@ -4,12 +4,22 @@
     
     <script>
       function setVerison() {
-        $("#ver").html('1.0.5')
+        $("#ver").html('1.0.6')
       }
       
       function cal() {
         base6 = 30
         base2 = 80
+        
+        //if is vegetable
+        if ($("#isVegetable").checked) {
+          base6 = 170
+          base2 = 250
+        }
+        
+        $("#isVegetable").html(base6 + '/' base2)
+        
+        
         v1 = 0
         total1 = 0
         v2 = 0
@@ -71,6 +81,16 @@
           <input type="checkbox" id="isVegetable" checked="checked">
         </td>
       </tr>
+      
+      <tr>
+        <td>
+          base value
+        </td>
+        <td>
+          <span id="baseValue">??</span>
+        </td>
+      </tr>
+      
       
       <tr>
         <td>
