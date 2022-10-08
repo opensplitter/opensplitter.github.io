@@ -4,8 +4,20 @@
     
     <script>
       function cal() {
+        base6 = 30
+        base2 = 80
+        v1 = 0
+        total1 = 0
+        //mission(6): 30 / 170 
+        //mission(2): 80 / 250
+        for (let i = 1; i <= 6; i++) {
+          v1 = i
+          total1 = i * base6
+        }
         
-        alert("input: " + $("#inputAmount").val()) 
+        $("#v1").html(v1)
+        $("#total1").html(total1)
+//         alert("input: " + $("#inputAmount").val()) 
       }
     </script>
     
