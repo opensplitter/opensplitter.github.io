@@ -5,7 +5,7 @@
     
     <script>
       function setVerison() {
-        $("#ver").html('1.0.17')
+        $("#ver").html('1.0.18')
       }
 
       function cal() {
@@ -52,8 +52,15 @@
           if (total2 >= $("#inputAmount").val()) { break; }
         }
         $("#v2").html(v2)
-        $("#total2").html(total2)
+        if (total2 > $("#inputAmount").val()) {
+          $("#total2").html('<font color=\"green\">' + total2 + '</font>')
+        }
+        else {
+          $("#total2").html('<font color=\"red\">' + total2 + '</font>')
+        }
+//         $("#total2").html(total2)
 
+        
 
         for (let i = 0; i <= 6; i++) {
           v3 = i
@@ -61,7 +68,13 @@
           if (total3 >= $("#inputAmount").val()) { break; }
         }
         $("#v3").html(v3)
-        $("#total3").html(total3)
+        if (total3 > $("#inputAmount").val()) {
+          $("#total3").html('<font color=\"green\">' + total3 + '</font>')
+        }
+        else {
+          $("#total3").html('<font color=\"red\">' + total3 + '</font>')
+        }
+//         $("#total3").html(total3)
       }
       
     </script>
