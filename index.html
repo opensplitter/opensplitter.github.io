@@ -5,7 +5,7 @@
     
     <script>
       function setVerison() {
-        $("#ver").html('1.0.21')
+        $("#ver").html('1.0.22')
       }
 
       function cal() {
@@ -30,14 +30,17 @@
         total2 = 0
         v3 = 0
         total3 = 0
+        pointNeed = 1000 - $("#inputAmount").val()
+        $("#pointleft").html(pointNeed)
 
+        
         for (let i = 0; i <= 6; i++) {
           v1 = i
           total1 = i * base6
-          if (total1 >= $("#inputAmount").val()) { break; }
+          if (total1 >= pointNeed) { break; }
         }
         $("#v1").html(v1)
-        if (total1 >= $("#inputAmount").val()) {
+        if (total1 >= pointNeed) {
           $("#total1").html('<font color=\"green\">' + total1 + '</font>')
         }
         else {
@@ -49,10 +52,10 @@
         for (let i = 0; i <= 6; i++) {
           v2 = i
           total2 = i * base6 + base2
-          if (total2 >= $("#inputAmount").val()) { break; }
+          if (total2 >= pointNeed) { break; }
         }
         $("#v2").html(v2)
-        if (total2 >= $("#inputAmount").val()) {
+        if (total2 >= pointNeed) {
           $("#total2").html('<font color=\"green\">' + total2 + '</font>')
         }
         else {
@@ -65,10 +68,10 @@
         for (let i = 0; i <= 6; i++) {
           v3 = i
           total3 = i * base6 + base2 * 2
-          if (total3 >= $("#inputAmount").val()) { break; }
+          if (total3 >= pointNeed) { break; }
         }
         $("#v3").html(v3)
-        if (total3 >= $("#inputAmount").val()) {
+        if (total3 >= pointNeed) {
           $("#total3").html('<font color=\"green\">' + total3 + '</font>')
         }
         else {
@@ -108,7 +111,7 @@
       
       <tr>
         <td>
-          Point left
+          Current point
         </td>
         <td>
           <input type="text" id="inputAmount">
@@ -117,10 +120,19 @@
       
       <tr>
         <td>
+          Point left
+        </td>
+        <td>
+          <span id="pointleft">??</span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
           Is vegetable
         </td>
         <td>
-          <input type="checkbox" id="isVegetable" checked="checked">
+          <input type="checkbox" id="isVegetable">
         </td>
       </tr>
       
